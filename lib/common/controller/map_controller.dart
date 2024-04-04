@@ -42,7 +42,7 @@ class MapNotifier extends ChangeNotifier {
 
   /// Draws a route from the current location to the destination
   /// [destination] is the destination as GeoPoint
-  void gernerRouteFromCurrentLocation(GeoPoint destination) {
+  void generateRouteFromCurrentLocation(GeoPoint destination) {
     controller.clearAllRoads();
     controller.drawRoad(currentLocation!, destination);
   }

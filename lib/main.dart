@@ -10,9 +10,15 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(MultiProvider(providers: [
-    ChangeNotifierProvider(
-      create: (context) => MapNotifier(),
+
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => MapNotifier(),
+        ),
+      ],
+      child: const App(),
     ),
-  ], child: const App()));
+  );
 }
